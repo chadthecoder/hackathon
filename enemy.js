@@ -1,5 +1,6 @@
 class Enemy extends People {
     constructor(xpos, ypos, xv, yv, test) {
+      super();
       this.xpos = xpos;
       this.ypos = ypos;
       this.xv = xv;

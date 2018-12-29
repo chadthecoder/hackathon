@@ -1,14 +1,17 @@
 window.onload=function()
 {
+    setVars();
+    var me = new Player(10, 10, 0, 0, "I am a player");
     canv = document.getElementById("hack");
     ctx = canv.getContext("2d");
     document.addEventListener("keydown", keyPush);
     setInterval(game, 1000/15);
-    setVars();
+    
 }
 function setVars()
 {
-var me = new Player(10, 10, 0, 0, "I am a player");
+//var me = new Player(10, 10, 0, 0, "I am a player");
+var ghost = new Enemy(15, 15, 0, 0, "I am a enemy");
 px=py=10;
 gs=tc=20;
 pxv=pyv=0;
@@ -44,4 +47,13 @@ function keyPush(evt)
             break;
  
     }
+}
+function reloadBackground()
+{
+    ctx.fillStyle="green";
+    ctx.fillRect(0, 0, canv.width, canv.height);
+}
+function outOfBounds()
+{
+    console.log("Out of Bounds!");
 }

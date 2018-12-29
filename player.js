@@ -1,5 +1,6 @@
 class Player extends People {
     constructor(xpos, ypos, xv, yv, test) {
+      super();
       this.xpos = xpos;
       this.ypos = ypos;
       this.xv = xv;
@@ -7,7 +8,26 @@ class Player extends People {
       this.test = test;
       console.log(test);
     }
-  }
+    keyPush(evt)
+    {
+        switch(evt.keyCode)
+        {
+            case 37:
+                pxv=-1; pyv=0;
+                break;
+            case 38:
+                pxv=0; pyv=-1;
+                break;
+            case 39:
+                pxv=1; pyv=0;
+                break;
+            case 40:
+                pxv=0; pyv=1;
+                break;
+ 
+        }
+    }
+}
 
 function reloadPlayer()
 {

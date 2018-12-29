@@ -1,1 +1,1 @@
-I am particinpating in the codecareer.org hackathon
+I am participating in the codecareer.org hackathon

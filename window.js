@@ -7,20 +7,20 @@ window.onload=function()
     {
         switch(evt.keyCode)
         {
-            case 37:
+            case keycodes.LEFT_ARROW:
                 me.setXv(-1); me.setYv(0);
                 console.log(this.xv);
                 break;
-            case 38:
+            case keycodes.UP_ARROW:
                 me.setXv(0); me.setYv(-1);
                 break;
-            case 39:
+            case keycodes.RIGHT_ARROW:
                 me.setXv(1); me.setYv(0);
                 break;
-            case 40:
+            case keycodes.DOWN_ARROW:
                 me.setXv(0); me.setYv(1);
                 break;
-            case 32:
+            case keycodes.SPACE:
                 var bull = new Bullet(me, "black", 1, 0);
                 bull.shoot();
                 setInterval(bull.reloadBullet, 1000/15);

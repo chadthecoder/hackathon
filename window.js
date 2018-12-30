@@ -3,8 +3,6 @@ window.onload=function()
     let me = new Player("silver", 10, 10, 0, 0, "I am a player");
     let ghost = new Enemy("white", 15, 15, 0, 0, "I am a enemy"); 
 
-    
-
     function keyPush(evt)
     {
         switch(evt.keyCode)
@@ -22,11 +20,16 @@ window.onload=function()
             case 40:
                 me.setXv(0); me.setYv(1);
                 break;
+            case 32:
+                var bull = new Bullet(me, "black", 1, 0);
+                bull.shoot();
+                setInterval(bull.reloadBullet, 1000/15);
+                console.log("new bullet");
+
         }
     }
 
     gs=tc=20;
-    var test2 = 0;
     
     ghost.getXpos();
     me.setXpos(4);
@@ -36,20 +39,6 @@ window.onload=function()
     document.addEventListener("keydown", keyPush);
     setInterval(game, 1000/15, me, ghost);
     
-}
-
-
-
-function setVars()
-{
-//me1.setXpos(10);
-//me1.setYpos(10);
-px=py=10;
-pxv=pyv=0;
-ex=ey=15;
-exv=eyv=0;
-score = 0;
-console.log(score);
 }
 
 function game(me, ghost)

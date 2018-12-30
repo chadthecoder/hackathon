@@ -44,6 +44,18 @@ class People {
         this.yv = yv;
     }
 
+    /*
+shoot()
+{
+    ctx.fillStyle="black";
+    ctx.fillRect((this.xpos+1)*gs, this.ypos*gs, gs-2, gs-2);
+}
+reloadBullet()
+{
+    ctx.fillStyle="black";
+    ctx.fillRect((this.xpos+1)*gs, this.ypos*gs, gs-2, gs-2);
+}*/
+
     move()
     {
         //console.log(this.xv);

@@ -1,42 +1,7 @@
 class Enemy extends People {
-    constructor(xpos, ypos, xv, yv, test) {
-      super();
-      this.xpos = xpos;
-      this.ypos = ypos;
-      this.xv = xv;
-      this.yv = yv;
-      this.test = test;
-      console.log(test);
+    constructor(_color, _xpos, _ypos, _xv, _yv, _test) {
+      super(_color, _xpos, _ypos, _xv, _yv);
+      this.test = _test;
+      console.log(this.test);
     }
   }
-
-function reloadEnemy()
-{
-    ctx.fillStyle="white";
-    ctx.fillRect(ex*gs, ey*gs, gs-2, gs-2);
-}
-function movingEnemy()
-{
-    ex += exv;
-    ey += eyv;
-    if(px < 0)
-    {
-        //px = tc-1;
-        outOfBounds();
-    }
-    if(ex > tc - 1)
-    {
-        //px = 0;
-        outOfBounds();
-    }
-    if(ey < 0)
-    {
-        //py = tc-1;
-        outOfBounds();
-    }
-    if(ey > tc - 1)
-    {
-       //py = 0;
-       outOfBounds();
-    }
-}
